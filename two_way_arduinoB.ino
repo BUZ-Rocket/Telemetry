@@ -3,7 +3,7 @@
 #include <SPI.h>
 #include  <nRF24L01.h>
 #include <RF24.h>
-RF24 radio(9, 10); // CE, CSN
+RF24 radio(9, 8); // CE, CSN
 const byte  addresses [][6] = {"00001", "00002"};    //Setting the two addresses. One for  transmitting and one for receiving
 int button_pinB = 6;
 int led_pinB = 5;
