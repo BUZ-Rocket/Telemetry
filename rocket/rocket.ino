@@ -18,8 +18,8 @@ void loop()
 { 
   delay(5);
   radio.stopListening(); //This sets the module as transmitter
-  msgOut = "Hello from Rocket " + String(++i);
-  radio.write(&text, sizeof(text));   //Sending the data
+  msgOut = "Hello from Rocket " + char(++i);
+  radio.write(&msgOut, sizeof(msgOut));   //Sending the data
   delay(5);
   
   radio.startListening();                            //This   sets the module as receiver
