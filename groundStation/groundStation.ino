@@ -17,6 +17,19 @@ void setup() {
   radio.setPALevel(RF24_ PA_MIN);   //You can set it as minimum or maximum depending on the distance between the transmitter   and receiver. 
 }
 
+/*
+
+ ㅇㅇㅇㅇㅇㅇㅇㅇ    ㅇ      ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ     ㅇ     ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ  ㅇ   ㅇ           ㅇ ㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+      ㅇ         ㅇ      ㅇ            ㅇ    ㅇ             ㅇ         ㅇ   ㅇ        ㅇ                   ㅇ
+    ㅇ   ㅇ  ㅇㅇㅇㅇ      ㅇ            ㅇ     ㅇ          ㅇ   ㅇ       ㅇ   ㅇ      ㅇ     ㅇㅇ        ㅇㅇ    ㅇ
+  ㅇ       ㅇ     ㅇ     ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ    ㅇ         ㅇ       ㅇ     ㅇㅇㅇㅇ    ㅇ      ㅇㅇㅇ      ㅇㅇㅇ     ㅇ
+    ㅇ           ㅇ                         ㅇ                        ㅇ   ㅇ      ㅇ     ㅇㅇ       ㅇㅇ    ㅇ
+    ㅇ                      ㅇ                                        ㅇ   ㅇ        ㅇ                 ㅇ
+    ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ         ㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇㅇ                       ㅇ   ㅇ            ㅇㅇㅇㅇㅇㅇㅇㅇㅇ
+
+*/
+
+
 void loop() 
 { 
   char msgOut[100] = "";
