@@ -18,7 +18,15 @@ void loop()
 { 
   delay(5);
   radio.stopListening(); //This sets the module as transmitter
+<<<<<<< HEAD
   msgOut = "Hello from Rocket " + char(++i);
+=======
+  const char* a = "Hello from Ground Station ";
+  for (int i = 0; i < strlen(a); i++) {
+    msgOut[i] = a[i];
+  }
+  
+>>>>>>> 4dd83db7533b4a29dd497a09aa43ca08f2fa5ab0
   radio.write(&msgOut, sizeof(msgOut));   //Sending the data
   delay(5);
   
