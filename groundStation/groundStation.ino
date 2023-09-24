@@ -1,10 +1,11 @@
 #include <SPI.h>
+#include <string.h>
 #include "nRF24L01.h"
 #include "RF24.h"
 RF24 radio(9, 8); // CE, CSN
 const byte   addresses [][6] = {"00001", "00002"};  //Setting the two addresses. One for   transmitting and one for receiving
-char msgOut[] = "";
-char msgIn[] = "";
+char msgOut[100] = "";
+char msgIn[100] = "";
 int i = 0;
 
 void setup() {
@@ -18,7 +19,11 @@ void loop()
 { 
   delay(5);
   radio.stopListening(); //This sets the module as transmitter
-  msgOut = "Hello from Ground Station " + String(++i);
+  const char* a = "Hello from Ground Station ";
+  for (int i = 0; i < strlen(a); i++) {
+    msgOut[i] = a[i];
+  }
+
   radio.write(&msgOut, sizeof(msgOut));   //Sending the data
   delay(5);
   
