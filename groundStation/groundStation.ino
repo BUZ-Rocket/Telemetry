@@ -19,7 +19,7 @@ void loop()
   delay(5);
   radio.stopListening(); //This sets the module as transmitter
   msgOut = "Hello from Ground Station " + String(++i);
-  radio.write(&text, sizeof(text));   //Sending the data
+  radio.write(&msgOut, sizeof(msgOut));   //Sending the data
   delay(5);
   
   radio.startListening();                            //This   sets the module as receiver
